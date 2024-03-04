@@ -1,0 +1,9 @@
+services:
+  consul-server:
+    image: consul-image
+    build: .
+    container_name: consul-server
+    ports:
+      - '8500:8500'
+    volumes:
+      - ./consul.hcl:/etc/consul.d/consul.hcl
